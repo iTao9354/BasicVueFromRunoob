@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+    	   <ul>
+                <li v-for="value in obj"> {{value}} </li>   
+           </ul>
+
+           <ol>
+               <li v-for="(value, key) in obj">
+                   {{key}} : {{value}}
+               </li>
+           </ol>
+
+           <ul>
+               <li v-for="(value, key, index) in obj">
+                   {{index}} . {{key}} : {{value}}
+               </li>
+           </ul>
+    	</div>
+
+    	<script>
+            new Vue({
+                el: '#app',
+                data: {
+                    obj: {
+                        name: '菜鸟教程',
+                        url: 'http://www.runoob.com',
+                        slogan: '学习学习！'
+                    }
+                }
+            });
+    	</script>
+    </body>
+</html>
