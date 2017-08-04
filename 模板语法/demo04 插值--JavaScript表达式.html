@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+        <style>
+            .list-de3233 {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+    	<div id="app">
+    	   <p> {{5+5}} </p>
+           <p> {{ok ? 'Yes' : 'No'}} </p>
+           <p> {{message.split('').reverse().join('')}} </p>
+           <p :class="'list-' + id"> 这是一个段落！ </p>
+    	</div>
+
+    	<script>
+    		new Vue({
+                el: '#app',
+                data: {
+                    id: 'de3233',
+                    message: 'Hello Vue.js!',
+                    ok: true
+                }
+            });
+    	</script>
+    </body>
+</html>

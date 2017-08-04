@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+    	   <p v-if="seen">现在你看到我了</p>
+           <template v-if="ok">
+               <h1>标题</h1>
+               <p>段落段落</p>
+           </template>
+    	</div>
+
+    	<script>
+    		new Vue({
+                el: '#app',
+                data: {
+                    seen: true,
+                    ok: true
+                }
+            });
+    	</script>
+    </body>
+</html>

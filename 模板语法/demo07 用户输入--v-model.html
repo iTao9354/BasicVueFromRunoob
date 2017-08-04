@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+    	   <p> {{message}} </p>
+           <input type="text" v-model="message">
+    	</div>
+
+    	<script>
+    		new Vue({
+                el: '#app',
+                data: {
+                    message: '这是文本'
+                }
+            });
+    	</script>
+    </body>
+</html>

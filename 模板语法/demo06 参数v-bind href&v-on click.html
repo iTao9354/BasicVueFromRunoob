@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+    	   <a v-bind:href="url">点我啊</a>
+           <br><br>
+           <button v-on:click="reverseStr">反转字符串</button>
+           <p> {{message}} </p>
+    	</div>
+
+    	<script>
+    		new Vue({
+                el: '#app',
+                data: {
+                    url: 'http://www.runoob.com',
+                    message: '1234567!'
+                },
+                methods: {
+                    reverseStr: function() {
+                        this.message = this.message.split('').reverse().join('');
+                    }
+                }
+            });
+    	</script>
+    </body>
+</html>

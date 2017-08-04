@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+        <style>
+            .active {
+                color: #fff;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+    	<div id="app">
+    		<label for="id1">点击复选框改变文本颜色</label><input type="checkbox" v-model="class1">
+            <p :class="{'active': class1}">这是一个段落</p>
+    	</div>
+
+    	<script>
+    		new Vue({
+    			el: '#app',
+    			data: {
+    				class1: false
+    			}
+    		});
+    	</script>
+    </body>
+</html>
