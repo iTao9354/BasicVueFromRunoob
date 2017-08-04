@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+    	   <div v-if="Math.random() > .5">
+               Sorry
+           </div>
+           <div v-else>
+               Not Sorry
+           </div>
+    	</div>
+
+    	<script>
+            new Vue({
+                el: '#app'
+            });
+    	</script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+    	   <p v-show="ok">这是一个段落，能显示不？</p>
+    	</div>
+
+    	<script>
+            new Vue({
+                el: '#app',
+                data: {
+                    ok: true
+                }
+            });
+    	</script>
+    </body>
+</html>
