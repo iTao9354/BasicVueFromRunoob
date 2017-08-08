@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+            <div>
+                单个复选框：
+                <input type="checkbox" v-model="checked">
+                <label for=""> {{checked}} </label>
+            </div>
+            <div>
+                多个复选框：
+                <input type="checkbox" value="Runoob" v-model="checkedNames">
+                <label for="">Runoob</label>
+                <input type="checkbox" value="Google" v-model="checkedNames">
+                <label for="">Google</label>
+                <input type="checkbox" value="Baidu" v-model="checkedNames">
+                <label for="">Baidu</label>
+                <input type="checkbox" value="Taobao" v-model="checkedNames">
+                <label for="">Taobao</label>
+                <br>
+                <span>选中的数组为 {{checkedNames}} </span>
+            </div>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    checked: true,
+                    checkedNames: []
+                }
+            });   
+        </script>
+    </body>
+</html>

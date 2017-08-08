@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+            <div>
+                <label for="">input元素：</label>
+                <input type="text" v-model="message">
+                <p> {{message}} </p>
+            </div>
+            <div>
+                <label for="">textarea元素：</label>
+                <textarea name="" id="" cols="30" rows="10" v-model="message2"></textarea>
+                <p> {{message2}} </p>
+            </div>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    message: 'Runoob',
+                    message2: '菜鸟教程--http://www.runoob.com'
+                }
+            });   
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+            <input type="radio" value="Runoob" v-model="picked">
+            <label for="">Runoob</label>
+            <br>
+            <input type="radio" value="Google" v-model="picked">
+            <label for="">Google</label>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    picked: 'Runoob'
+                }
+            });   
+        </script>
+    </body>
+</html>
