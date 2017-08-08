@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app" :style="[styleObj, styleObj2]">
+            这是demo6
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    styleObj: {
+                        color: 'blue',
+                        fontSize: '50px'
+                    },
+                    styleObj2: {
+                        background: '#ccc'
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .active {
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+            .text-danger {
+                color: #fff;
+            }
+        </style>
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app" :class="classObj">
+            直接将数据中的对象绑定到div的class中
+        </div>
+
+    	<script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    classObj: {
+                        active: true,
+                        'text-danger': true
+                    }
+                }
+            });
+    	</script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .active {
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+            .text-danger {
+                color: #fff;
+            }
+        </style>
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app" :class="[activeCls, dangerCls]">
+            在div绑定返回对象的计算属性
+        </div>
+
+    	<script>
+            new Vue({
+                el: '#app',
+                data: {
+                    activeCls: 'active',
+                    dangerCls: 'text-danger'
+                }
+            });
+    	</script>
+    </body>
+</html>
