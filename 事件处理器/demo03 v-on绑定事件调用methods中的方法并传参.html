@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+            <button @click="greet('hi')">按钮</button>
+            <button @click="greet('what')">按钮二</button>
+        </div>
+
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                methods: {
+                    greet: function(message) {
+                        alert(message);
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
