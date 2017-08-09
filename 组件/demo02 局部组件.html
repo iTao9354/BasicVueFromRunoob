@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app">
+            <runoob></runoob>
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                components: {
+                    runoob: {
+                        template: '<h1>这是一个局部组件</h1>'
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

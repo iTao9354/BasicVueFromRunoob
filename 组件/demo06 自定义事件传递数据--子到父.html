@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../plugins/vue.min.js"></script>
+    </head>
+    <body>
+    	<div id="app" >
+            <p>{{total}}</p>
+            <button-component @increment="incrementTotal"></button-component>
+        </div>
+        <script>
+            Vue.component('button-component', {
+                template: '<button @click="increment">{{counter}}</button>',
+                data: function() {
+                    return {
+                        counter: 0
+                    };
+                },
+                methods: {
+                    increment: function() {
+                        this.counter ++;
+                        this.$emit('increment');
+                    }
+                }
+            })
+            new Vue({
+                el: '#app',
+                data: {
+                    total: 0
+                },
+                methods: {
+                    incrementTotal: function() {
+                        this.total ++;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
